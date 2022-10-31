@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I/O</title>
+    <meta charset="utf-8">
+    <link rel = "icon" href = "pic\pic.gif" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+body{
+	background:url("background2.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color : white;
+}     
+      .markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#c5c8c6;background-color:#27292c !important;border:#43484c;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#7C7C7C}code[class*="language-"] .token.punctuation,pre[class*="language-"] .token.punctuation{color:#96CBFE}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#99CC99}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#FF73FD}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#96CBFE}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#96CBFE}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#C6C5FE}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#A8FF60}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#FF8000}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{color:#FFD2A7}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#7C7C7C}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#EDEDED}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#CFCB90}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#FFD2A7}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#FFD2A7}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#C6C5FE}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex,code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#E9C062}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}.emoji {
+  height: 0.8em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#ccc;background-color:#141414;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#a3a3a3}html body strong{color:#fff}html body del{color:#a3a3a3}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#a3a3a3;background-color:#282828;border-left:4px solid #3d3d3d}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#3d3d3d;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#fff}html body table td,html body table th{border:1px solid #3d3d3d;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#fff;background-color:#282828;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#3d3d3d;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #3d3d3d;border-bottom:2px solid #2e2e2e;padding:2px 4px;background-color:#282828;border-radius:3px}@media print{html body{background-color:#141414}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#a3a3a3}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}
+    /* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+    </style>
+    
+  </head>
+  <body for="html-export">
+    <div class="mume markdown-preview">
+    <html><head></head><body><div><h1 class="mume-header" id="centeriocenter" ebook-toc-level-1 heading="&lt;center&gt;I/O&lt;/center&gt;"><center>I/O</center></h1>
+
+<p>&#x4E0E;&#x5176;&#x5B83;&#x5927;&#x591A;&#x6570;&#x8BED;&#x8A00;&#x4E00;&#x6837;&#xFF0C;haskell&#x4E5F;&#x6709;&#x76F8;&#x5E94;&#x7684;I/O.haskell &#x4E25;&#x683C;&#x5730;&#x628A;&#x7EAF;&#x4EE3;&#x7801;&#x4E0E;&#x6709;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x4EA4;&#x4E92;&#x4EE3;&#x7801;&#x5206;&#x9694;&#x3002;</p>
+<h2 class="mume-header" id="%E7%BB%8F%E5%85%B8io" ebook-toc-level-2 heading="&amp;#x7ECF;&amp;#x5178;I/O">&#x7ECF;&#x5178;I/O</h2>
+
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file : basicio.hs</span>
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span>
+    <span class="token builtin">putStrLn</span> <span class="token string">&quot;Greetings! What is your name?&quot;</span>
+    <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token builtin">getLine</span>
+    <span class="token builtin">putStrLn</span> <span class="token operator">$</span> <span class="token string">&quot;Welcome to Haskell,&quot;</span> <span class="token operator">++</span> <span class="token hvariable">inpStr</span> <span class="token operator">++</span> <span class="token string">&quot;!&quot;</span>
+</pre><p>&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x8C03;&#x7528;<code>main</code>&#x2014;&#x2014;<code>runghc basicio.hs</code> &#x6216; &#x5728;ghci&#x8C03;&#x7528;<code>main</code>.</p>
+<p>&#x7A0B;&#x5E8F;&#x9996;&#x5148;&#x8F93;&#x51FA;<code>putStrLn</code>&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;&#xFF09;,<code>getLine</code>&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x53D6;&#x4E00;&#x884C;.<code>&lt;-</code>&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;I/O&#x52A8;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x5230;&#x53D8;&#x91CF;&#x3002;&#x6700;&#x540E;&#x7A0B;&#x5E8F;&#x8F93;&#x5165;&#x4E86;&#x4E00;&#x6BB5;&#x5305;&#x542B;&#x8F93;&#x5165;&#x7684;&#x6587;&#x5B57;&#x3002;</p>
+<pre data-role="codeBlock" data-info="ghci" class="language-ghci"><code>ghci&gt;:type putStrLn
+putStrLn :: String -&gt; IO()
+ghci&gt;:type getLine
+getLine :: IO String
+</code></pre><p>&#x542B;&#x6709;IO&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;<code>IO ..</code>&#x8868;&#x793A;&#x4E00;&#x4E2A;IO&#x52A8;&#x4F5C;&#xFF0C;&#x5E76;&#x4E14;&#x5F53;&#x52A8;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;<code>String</code>,&#x5F53;&#x7136;&#x8FD9;&#x9700;&#x8981;&#x8FD0;&#x7B97;&#x7B26;<code>&lt;-</code>&#x7684;&#x5E2E;&#x52A9;&#x3002;</p>
+<blockquote>
+<p>&#x63D0;&#x793A;: &#x4E5F;&#x8BB8;&#x4F60;&#x770B;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7B26;&#x53F7;<code>$</code>,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;ghci&#x67E5;&#x770B;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token punctuation">(</span><span class="token operator">$</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token operator">$</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token hvariable">a</span> <span class="token operator">-&gt;</span> <span class="token hvariable">b</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token hvariable">a</span> <span class="token operator">-&gt;</span> <span class="token hvariable">b</span>       <span class="token comment">-- Defined in &#x2018;GHC.Base&#x2019;</span>
+<span class="token keyword keyword-infixr">infixr</span> <span class="token number">0</span> <span class="token operator">$</span>
+</pre><p><code>$</code>&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x548C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x628A;&#x53C2;&#x6570;&#x8D4B;&#x7ED9;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#xFF0C;&#x5FC5;&#x987B;&#x628A;&#x540E;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;&#x90E8;&#x5206;&#x7528;&#x62EC;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x3002;</p>
+</blockquote>
+<p><code>main</code>&#x5728;haskell&#x4E2D;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;<code>main</code>&#x662F;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5176;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;IO&#x52A8;&#x4F5C;&#xFF0C;&#x7C7B;&#x578B;&#x662F;<code>IO ()</code>,&#x5373;&#x4E0D;&#x8FD4;&#x56DE;&#x4EFB;&#x4F55;&#x503C;&#x3002;&#x8FD9;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x9694;&#x79BB;&#x673A;&#x5236;&#x4EE5;&#x5B9E;&#x73B0;&#x975E;&#x7EAF;&#x4EE3;&#x7801;&#x548C;&#x7EAF;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x9694;&#x79BB;&#x3002;&#x5728;IO&#x52A8;&#x4F5C;&#x4E2D;&#x6267;&#x884C;IO&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x7EAF;&#x4EE3;&#x7801;&#x3002;</p>
+<p><code>do</code>&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E32;&#x52A8;&#x4F5C;&#xFF08;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x5F53;&#x7136;&#x4E0D;&#x9700;&#x8981;&#xFF09;&#xFF0C;<code>do</code>&#x4EE3;&#x7801;&#x7684;&#x503C;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x505A;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5C06;&#x7EAF;&#x4EE3;&#x7801;&#x548C;&#x975E;&#x7EAF;&#x4EE3;&#x7801;&#x9694;&#x79BB;:</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file: isolation.hs</span>
+<span class="token hvariable">greet</span> <span class="token operator">::</span> <span class="token constant">String</span> <span class="token operator">-&gt;</span> <span class="token constant">String</span>
+<span class="token hvariable">greet</span> <span class="token hvariable">name</span> <span class="token operator">=</span>  <span class="token string">&quot;Welcome,&quot;</span> <span class="token operator">++</span> <span class="token hvariable">name</span> <span class="token operator">++</span> <span class="token string">&quot;!&quot;</span>
+
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span>
+    <span class="token builtin">putStrLn</span> <span class="token string">&quot;Greetings! What is your name?&quot;</span>
+    <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token builtin">getLine</span>
+    <span class="token builtin">putStrLn</span> <span class="token operator">$</span> <span class="token hvariable">greet</span> <span class="token hvariable">inpStr</span>
+</pre><table>
+<thead>
+<tr>
+<th>Pure</th>
+<th>Impure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x76F8;&#x540C;&#x7684;&#x8F93;&#x5165;&#x4EA7;&#x751F;&#x76F8;&#x540C;&#x7684;&#x7ED3;&#x679C;</td>
+<td>&#x76F8;&#x540C;&#x7684;&#x8F93;&#x5165;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>&#x4ECE;&#x4E0D;&#x4F1A;&#x6709;&#x526F;&#x4F5C;&#x7528;</td>
+<td>&#x53EF;&#x80FD;&#x6709;&#x526F;&#x4F5C;&#x7528;</td>
+</tr>
+<tr>
+<td>&#x4ECE;&#x4E0D;&#x4FEE;&#x6539;&#x72B6;&#x6001;</td>
+<td>&#x53EF;&#x80FD;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#xFF0C;&#x7CFB;&#x7EDF;&#x6216;&#x8005;&#x5168;&#x5C40;&#x72B6;&#x6001;</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%A5%E6%9F%84" ebook-toc-level-2 heading="&amp;#x4F7F;&amp;#x7528;&amp;#x6587;&amp;#x4EF6;&amp;#x548C;&amp;#x53E5;&amp;#x67C4;">&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x548C;&#x53E5;&#x67C4;</h2>
+
+<p>Haskell&#x7684;I/O&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x7C7B;&#x4F3C;&#x3002;</p>
+<h3 class="mume-header" id="%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99" ebook-toc-level-3 heading="&amp;#x6587;&amp;#x4EF6;&amp;#x8BFB;&amp;#x5199;">&#x6587;&#x4EF6;&#x8BFB;&#x5199;</h3>
+
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">-- file:toupper-imp.hs</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> System<span class="token punctuation">.</span>IO</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> Data<span class="token punctuation">.</span>Char</span><span class="token punctuation">(</span><span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">main</span> <span class="token operator">::</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span> 
+       <span class="token hvariable">inh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;input.txt&quot;</span> <span class="token constant">ReadMode</span>
+       <span class="token hvariable">outh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;output.txt&quot;</span> <span class="token constant">WriteMode</span>
+       <span class="token hvariable">mainloop</span> <span class="token hvariable">inh</span> <span class="token hvariable">outh</span>
+       <span class="token hvariable">hClose</span> <span class="token hvariable">inh</span>
+       <span class="token hvariable">hClose</span> <span class="token hvariable">outh</span>
+
+<span class="token hvariable">mainloop</span> <span class="token operator">::</span> <span class="token constant">Handle</span> <span class="token operator">-&gt;</span> <span class="token constant">Handle</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token hvariable">mainloop</span> <span class="token hvariable">inh</span> <span class="token hvariable">outh</span> <span class="token operator">=</span> 
+    <span class="token keyword keyword-do">do</span> <span class="token hvariable">ineof</span> <span class="token operator">&lt;-</span> <span class="token hvariable">hIsEOF</span> <span class="token hvariable">inh</span>
+       <span class="token keyword keyword-if">if</span> <span class="token hvariable">ineof</span>
+           <span class="token keyword keyword-then">then</span> <span class="token builtin">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+           <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-do">do</span> <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token hvariable">hGetLine</span> <span class="token hvariable">inh</span>
+                   <span class="token hvariable">hPutStrLn</span> <span class="token hvariable">outh</span> <span class="token punctuation">(</span><span class="token builtin">map</span> <span class="token builtin">toUpper</span> <span class="token hvariable">inpStr</span><span class="token punctuation">)</span>
+                   <span class="token hvariable">mainloop</span> <span class="token hvariable">inh</span> <span class="token hvariable">outh</span>
+</pre><p>&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;<code>input.txt</code>&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6587;&#x5B57;&#x5168;&#x90E8;&#x8F6C;&#x5316;&#x4E3A;&#x5927;&#x5199;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x5728;<code>output.txt</code>.</p>
+<p>&#x9996;&#x5148;&#x6765;&#x770B;<code>main</code>&#x51FD;&#x6570;&#xFF0C;<code>inh &lt;- openFilee &quot;input.txt&quot; ReadMode</code>&#x6253;&#x5F00;&#x4E86;&#x6587;&#x4EF6;<code>input.txt</code>&#x5E76;&#x5C06;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x8FD4;&#x56DE;&#x7ED9;<code>inh</code>.&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;<code>outh &lt;- openFile &quot;output.txt&quot; WriteMode</code>&#x6253;&#x5F00;&#x4E86;&#x6587;&#x4EF6;<code>output.txt</code>&#x5E76;&#x5C06;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x8FD4;&#x56DE;&#x7ED9;<code>outh</code>.<br>
+<code>mainloop inh outh</code>&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x4E86;&#x64CD;&#x4F5C;.<code>hClose inh</code>&#x548C;<code>hClose outh</code>&#x5173;&#x95ED;&#x4E86;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x770B;<code>mainloop</code>&#x51FD;&#x6570;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF0C;<code>mainloop</code>&#x63A5;&#x6536;&#x4E86;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3002;<br>
+&#x5E76;&#x6267;&#x884C;&#x4E86;IO&#x64CD;&#x4F5C;&#xFF0C;&#x8BE5;IO&#x64CD;&#x4F5C;&#x5FAA;&#x73AF;&#x8BFB;&#x53D6;<code>ineof</code>&#x5BF9;&#x5E94;&#x6587;&#x4EF6;(<code>input.txt</code>)&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5C06;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x5E76;&#x5199;&#x5165;<code>outh</code>&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;(<code>output.txt</code>)&#xFF0C;&#x76F4;&#x5230;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x7ED3;&#x675F;&#xFF08;EOF&#xFF09;.</p>
+<blockquote>
+<p><code>mainloop</code>&#x4E2D;&#x7684;<code>return</code>&#x542B;&#x4E49;&#x548C;&#x5E38;&#x89C4;&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>return</code>&#x4E0D;&#x540C;&#xFF0C;&#x5728;&#x4E00;&#x822C;&#x7684;&#x8BED;&#x8A00;&#x4E2D;<code>return</code>&#x7528;&#x6765;&#x7ACB;&#x5373;&#x9000;&#x51FA;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#xFF1B;haskell&#x4E2D;&#x7684;<code>return</code>&#x6267;&#x884C;&#x4E0E;<code>&lt;-</code>&#x76F8;&#x53CD;&#x7684;&#x64CD;&#x4F5C;&#x2014;&#x2014;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x7EAF;&#x503C;&#xFF0C;&#x5E76;&#x5305;&#x88C5;&#x8FDB;IO&#x3002;</p>
+</blockquote>
+<p>&#x5173;&#x4E8E;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4E2D;&#x63D0;&#x5230;&#x7684;<code>ReadMode</code>&#x548C;<code>WriteMode</code>&#x8BF4;&#x660E;:&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x5C5E;&#x4E8E;IOMode&#x7C7B;&#x578B;</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token constant">ReadMode</span>
+<span class="token keyword keyword-data">data</span> <span class="token constant">IOMode</span> <span class="token operator">=</span> <span class="token constant">ReadMode</span> <span class="token operator">|</span> <span class="token operator">...</span>    <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token constant">IOMode</span>
+<span class="token keyword keyword-data">data</span> <span class="token constant">IOMode</span> <span class="token operator">=</span> <span class="token constant">ReadMode</span> <span class="token operator">|</span> <span class="token constant">WriteMode</span> <span class="token operator">|</span> <span class="token constant">AppendMode</span> <span class="token operator">|</span> <span class="token constant">ReadWriteMode</span>
+        <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Eq</span> <span class="token constant">IOMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Ord</span> <span class="token constant">IOMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Show</span> <span class="token constant">IOMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Read</span> <span class="token constant">IOMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Enum</span> <span class="token constant">IOMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.IOMode&#x2019;</span>
+</pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>IOMode</code>&#x662F;&#x4EE3;&#x6570;&#x6570;&#x636E;&#x7C7B;&#x578B;.&#x5404;&#x503C;&#x542B;&#x4E49;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>IOMode</th>
+<th>&#x53EF;&#x8BFB;</th>
+<th>&#x53EF;&#x5199;</th>
+<th>&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ReadMode</td>
+<td>&#x662F;</td>
+<td>&#x5426;</td>
+<td>&#x6587;&#x4EF6;&#x5F00;&#x5934;</td>
+<td>&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>WriteMode</td>
+<td>&#x5426;</td>
+<td>&#x662F;</td>
+<td>&#x6587;&#x4EF6;&#x5F00;&#x5934;</td>
+<td>&#x5982;&#x679C;&#x5B58;&#x5728;,&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x622A;&#x65AD;(&#x5B8C;&#x5168;&#x6E05;&#x7A7A;)</td>
+</tr>
+<tr>
+<td>ReadWriteMode</td>
+<td>&#x662F;</td>
+<td>&#x662F;</td>
+<td>&#x6587;&#x4EF6;&#x5F00;&#x5934;</td>
+<td>&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E0D;&#x4F1A;&#x635F;&#x5BB3;&#x539F;&#x6765;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>AppendMode</td>
+<td>&#x5426;</td>
+<td>&#x662F;</td>
+<td>&#x6587;&#x4EF6;&#x7ED3;&#x5C3E;</td>
+<td>&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E0D;&#x4F1A;&#x635F;&#x5BB3;&#x539F;&#x6765;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x6CE8;&#x610F;:&#x4EE5;&#x4E0A;&#x64CD;&#x4F5C;&#x7684;&#x90FD;&#x662F;&#x6587;&#x672C;&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;,&#x9700;&#x8981;&#x4F7F;&#x7528;<code>openBinaryFile</code>&#x66FF;&#x4EE3;<code>openFile</code>.</p>
+</blockquote>
+<h3 class="mume-header" id="seek-%E5%92%8C-tell" ebook-toc-level-3 heading="Seek &amp;#x548C; Tell">Seek &#x548C; Tell</h3>
+
+<p>&#x5F53;&#x4ECE;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x786C;&#x76D8;&#x4E0A;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x4E0A;&#x8BFB;&#x5199;&#x7684;&#x65F6;&#x5019;,&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;&#x5F53;&#x524D;&#x786C;&#x76D8;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x90E8;&#x8BB0;&#x5F55;,&#x6BCF;&#x6B21;&#x505A;&#x53E6;&#x4E00;&#x6B21;&#x8BFB;&#x7684;&#x65F6;&#x5019;,&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x4ECE;&#x5F53;&#x524D;&#x4E3A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x7684;&#x6570;&#x636E;&#x5757;,&#x5E76;&#x4E14;&#x589E;&#x52A0;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;,&#x53CD;&#x6620;&#x51FA;&#x4F60;&#x6B63;&#x5728;&#x8BFB;&#x7684;&#x6570;&#x636E;.</p>
+<p>&#x719F;&#x6089;python&#x6587;&#x4EF6;&#x72EC;&#x5199;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;seek&#x548C;tell&#x65B9;&#x6CD5;&#x6BD4;&#x8F83;&#x719F;&#x6089;,&#x5B83;&#x4EEC;&#x7528;&#x6765;&#x6539;&#x53D8;&#x548C;&#x83B7;&#x5F97;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x4F4D;&#x7F6E;.haskell&#x4E2D;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x51FD;&#x6570;.</p>
+<p><code>hTell</code>&#x53EF;&#x4EE5;&#x627E;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6307;&#x9488;&#x4F4D;&#x7F6E;,&#x800C;<code>hSeek</code>&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x4F4D;&#x7F6E;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">m</span> <span class="token constant">System<span class="token punctuation">.</span>IO</span>
+<span class="token hvariable">ghci</span> <span class="token constant">System<span class="token punctuation">.</span>IO</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token hvariable">hTell</span>
+<span class="token hvariable">hTell</span> <span class="token operator">::</span> <span class="token constant">Handle</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span> <span class="token constant">Integer</span>   <span class="token comment">-- Defined in &#x2018;GHC.IO.Handle&#x2019;</span>
+<span class="token hvariable">ghci</span> <span class="token constant">System<span class="token punctuation">.</span>IO</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token hvariable">hSeek</span>
+<span class="token hvariable">hSeek</span> <span class="token operator">::</span> <span class="token constant">Handle</span> <span class="token operator">-&gt;</span> <span class="token constant">SeekMode</span> <span class="token operator">-&gt;</span> <span class="token constant">Integer</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">-- Defined in &#x2018;GHC.IO.Handle&#x2019;</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token constant">SeekMode</span>
+<span class="token keyword keyword-data">data</span> <span class="token constant">SeekMode</span> <span class="token operator">=</span> <span class="token constant">AbsoluteSeek</span> <span class="token operator">|</span> <span class="token constant">RelativeSeek</span> <span class="token operator">|</span> <span class="token constant">SeekFromEnd</span>
+        <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Eq</span> <span class="token constant">SeekMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Ord</span> <span class="token constant">SeekMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Show</span> <span class="token constant">SeekMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Read</span> <span class="token constant">SeekMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+<span class="token keyword keyword-instance">instance</span> <span class="token constant">Enum</span> <span class="token constant">SeekMode</span> <span class="token comment">-- Defined in &#x2018;GHC.IO.Device&#x2019;</span>
+</pre><p><code>hTell</code>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53E5;&#x67C4;&#x53C2;&#x6570;,&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;.<code>hSeek</code>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53E5;&#x67C4;&#x53C2;&#x6570;&#x4E00;&#x4E2A;<code>SeekMode</code>&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;,&#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570;,&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;IO&#x52A8;&#x4F5C;.&#x5176;&#x4E2D;<code>SeekMode</code>&#x5404;&#x4E2A;&#x503C;&#x542B;&#x4E49;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>SeekMode</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AbsoluteSeek</td>
+<td>&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>RelativeSeek</td>
+<td>&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>SeekFromEnd</td>
+<td>&#x5C3E;&#x90E8;&#x4F4D;&#x7F6E;(&#x8DDD;&#x79BB;&#x5C3E;&#x90E8;&#x8DDD;&#x79BB;)</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E9%94%99%E8%AF%AF" ebook-toc-level-3 heading="&amp;#x6807;&amp;#x51C6;&amp;#x8F93;&amp;#x5165;,&amp;#x6807;&amp;#x51C6;&amp;#x8F93;&amp;#x51FA;,&amp;#x9519;&amp;#x8BEF;">&#x6807;&#x51C6;&#x8F93;&#x5165;,&#x6807;&#x51C6;&#x8F93;&#x51FA;,&#x9519;&#x8BEF;</h3>
+
+<p>&#x9700;&#x8981;&#x4E86;&#x89E3;&#x5230;,&#x5982;<code>getLine</code>,<code>putStrLn</code>,<code>print</code>&#x4E4B;&#x7C7B;&#x7684;&#x51FD;&#x6570;,&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5BF9;&#x53E5;&#x67C4;&#x7684;&#x64CD;&#x4F5C;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token builtin">getLine</span> <span class="token operator">=</span> <span class="token hvariable">hGetLine</span> <span class="token hvariable">stdin</span>
+<span class="token builtin">putStrLn</span> <span class="token operator">=</span> <span class="token hvariable">hPutStrLn</span> <span class="token hvariable">stdout</span>
+<span class="token builtin">print</span> <span class="token operator">=</span> <span class="token hvariable">hPrint</span> <span class="token hvariable">stdout</span>
+</pre><p>&#x5176;&#x4E2D;<code>stdin</code>,<code>stdout</code>,<code>stderr</code>&#x90FD;&#x662F;&#x53E5;&#x67C4;&#x7C7B;&#x578B;(<code>Handle</code>)&#x7684;&#x503C;.&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;,&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x6587;&#x4EF6;&#x8BFB;&#x5199;.</p>
+<p>&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x548C;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;.</p>
+<p>&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x7B14;&#x8BB0;&#x5F00;&#x5934;&#x7684;basicio.hs.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">$ <span class="token builtin class-name">echo</span> AgileFastx<span class="token operator">|</span> runghc basicio.hs
+Greetings<span class="token operator">!</span> What is your name?
+Welcome,AgileFastx <span class="token operator">!</span>
+</pre><p>&#x5F53;&#x8FD0;&#x884C;basicio.hs&#x65F6;,&#x5B83;&#x4E0D;&#x7B49;&#x5F85;&#x952E;&#x76D8;&#x7684;&#x8F93;&#x5165;,&#x800C;&#x662F;&#x4ECE;echo&#x7A0B;&#x5E8F;&#x63A5;&#x53D7;&#x4E86;&#x5B57;&#x7B26;&#x4E32;<code>AgileFastx</code>,&#x7ED3;&#x679C;&#x4E0E;&#x4F7F;&#x7528;&#x952E;&#x76D8;&#x952E;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7ED3;&#x679C;&#x5B8C;&#x5168;&#x4E00;&#x6837;.</p>
+<h3 class="mume-header" id="%E5%88%A0%E9%99%A4%E5%92%8C%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6" ebook-toc-level-3 heading="&amp;#x5220;&amp;#x9664;&amp;#x548C;&amp;#x91CD;&amp;#x547D;&amp;#x540D;&amp;#x6587;&amp;#x4EF6;">&#x5220;&#x9664;&#x548C;&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;</h3>
+
+<p><code>System.Directory</code>&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;.</p>
+<ul>
+<li><strong>removeFile</strong></li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4E4B;&#x524D;&#x751F;&#x6210;&#x7684;<code>output.txt</code>&#x5220;&#x9664;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">m</span> <span class="token constant">System<span class="token punctuation">.</span>Directory</span>
+<span class="token hvariable">ghci</span> <span class="token constant">System<span class="token punctuation">.</span>Directory</span><span class="token operator">&gt;</span><span class="token hvariable">removeFile</span> <span class="token string">&quot;output.txt&quot;</span>
+</pre><p>ghci&#x6CA1;&#x6709;&#x56DE;&#x663E;&#x8BF4;&#x660E;&#x6267;&#x884C;&#x6210;&#x529F;.</p>
+<ul>
+<li><strong>renameFile</strong></li>
+</ul>
+<p>&#x5C06;<code>input.txt</code>&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>renamed_input.txt</code></p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span> <span class="token constant">System<span class="token punctuation">.</span>Directory</span><span class="token operator">&gt;</span> <span class="token hvariable">renameFile</span> <span class="token string">&quot;input.txt&quot;</span> <span class="token string">&quot;renamed_input.txt&quot;</span>
+</pre><p>ghci&#x6CA1;&#x6709;&#x56DE;&#x663E;&#x8BF4;&#x660E;&#x91CD;&#x547D;&#x540D;&#x6210;&#x529F;.</p>
+<h3 class="mume-header" id="%E6%83%B0%E6%80%A7io" ebook-toc-level-3 heading="&amp;#x60F0;&amp;#x6027;I/O">&#x60F0;&#x6027;I/O</h3>
+
+<p>&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;&#x90FD;&#x662F;&#x4F20;&#x7EDF;&#x7684;I/O&#x4F8B;&#x5B50;.&#x7531;&#x4E8E;haskell&#x65F6;&#x4E00;&#x79CD;&#x60F0;&#x6027;&#x8BED;&#x8A00;,&#x5373;&#x9664;&#x975E;&#x4E0D;&#x8981;&#x4E0D;&#x6C42;&#x503C;.haskell&#x4E5F;&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x60F0;&#x6027;&#x65B9;&#x6CD5;&#x5904;&#x7406;I/O.</p>
+<ul>
+<li><strong>hGetContents</strong></li>
+</ul>
+<p><code>hGetContents</code>&#x51FD;&#x6570;,&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x53E5;&#x67C4;,&#x5E76;&#x8FD4;&#x56DE;<code>IO String</code>&#x7C7B;&#x578B;,&#x8FD4;&#x56DE;&#x7684;String&#x8868;&#x793A;&#x53E5;&#x67C4;&#x6240;&#x7ED9;&#x6587;&#x4EF6;&#x529B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;.</p>
+<p>&#x5728;&#x4E25;&#x683C;&#x6C42;&#x503C;&#x7684;&#x8BED;&#x8A00;&#x4E2D;,&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5BF9;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x5185;&#x5B58;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x53CB;&#x597D;&#x7684;,&#x56E0;&#x4E3A;&#x5176;&#x4E00;&#x6B21;&#x6027;&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x5165;&#x5185;&#x5B58;,&#x65E0;&#x8BBA;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x6709;&#x591A;&#x5C11;,&#x8BA1;&#x7B97;&#x673A;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x56E0;&#x4E3A;&#x6587;&#x4EF6;&#x8FC7;&#x5927;&#x800C;&#x7F3A;&#x5C11;&#x5185;&#x5B58;&#x5B58;&#x50A8;&#x8FD9;&#x4E9B;&#x6570;&#x636E;,&#x6700;&#x7EC8;&#x5BFC;&#x81F4;&#x5D29;&#x6E83;.&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;,&#x5728;&#x4E25;&#x683C;&#x6C42;&#x503C;&#x8BED;&#x8A00;&#x4E2D;,&#x91C7;&#x7528;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x6CD5;&#x51FA;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5168;&#x4F53;&#x6570;&#x636E;.</p>
+<p>haskell&#x4E2D;&#x7684;<code>hGetContents</code>&#x4E0D;&#x540C;,&#x5B83;&#x8FD4;&#x56DE;&#x7684;String&#x662F;&#x60F0;&#x6027;&#x4F30;&#x503C;&#x7684;,&#x5728;&#x8C03;&#x7528;<code>hGetContents</code>&#x65F6;,&#x5B9E;&#x9645;&#x4E0A;&#x6CA1;&#x6709;&#x8BFB;&#x53D6;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;.&#x5F53;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x88AB;&#x5904;&#x7406;&#x65F6;,&#x6570;&#x636E;&#x624D;&#x4F1A;&#x4ECE;&#x53E5;&#x67C4;&#x8BFB;&#x51FA;.&#x53EA;&#x8981;&#x5B57;&#x7B26;&#x6CA1;&#x6709;&#x88AB;&#x5904;&#x7406;,haskell&#x7684;&#x5783;&#x573E;&#x56DE;&#x6536;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x90A3;&#x5757;&#x5185;&#x5B58;.</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x7684;toupper-imp.hs&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x9002;&#x5F53;&#x7684;&#x4FEE;&#x6539;,&#x4EE5;&#x9002;&#x5E94;&#x8FD9;&#x79CD;&#x60F0;&#x6027;&#x65B9;&#x6CD5;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file : toupper-lazy.hs</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> System<span class="token punctuation">.</span>IO</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> Data<span class="token punctuation">.</span>Char</span><span class="token punctuation">(</span><span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">main</span> <span class="token operator">::</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span>
+    <span class="token hvariable">inh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;input.txt&quot;</span> <span class="token constant">ReadMode</span>
+    <span class="token hvariable">outh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;output.txt&quot;</span> <span class="token constant">WriteMode</span>
+    <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token hvariable">hGetContents</span> <span class="token hvariable">inh</span>
+    <span class="token keyword keyword-let">let</span> <span class="token hvariable">result</span> <span class="token operator">=</span> <span class="token hvariable">processData</span> <span class="token hvariable">inpStr</span>
+    <span class="token hvariable">hPutStr</span> <span class="token hvariable">outh</span> <span class="token hvariable">result</span>
+    <span class="token hvariable">hClose</span> <span class="token hvariable">inh</span>
+    <span class="token hvariable">hClose</span> <span class="token hvariable">outh</span>
+
+<span class="token hvariable">processData</span> <span class="token operator">::</span> <span class="token constant">String</span> <span class="token operator">-&gt;</span> <span class="token constant">String</span>
+<span class="token hvariable">processData</span> <span class="token operator">=</span> <span class="token builtin">map</span> <span class="token builtin">toUpper</span>
+</pre><p>&#x4FEE;&#x6539;&#x540E;,&#x65E0;&#x8BBA;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x6709;&#x591A;&#x5927;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x8FD0;&#x884C;.</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;,&#x5F53;&#x4F7F;&#x7528;&#x5B8C;&#x6210;<code>hGetContents</code>&#x540E;,haskell&#x7CFB;&#x7EDF;&#x5C06;&#x51B3;&#x5B9A;<code>hGetContents</code>&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x88AB;&#x5783;&#x573E;&#x56DE;&#x6536;&#x6389;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x540E;&#x7EED;&#x7A0B;&#x5E8F;&#x4E2D;&#x5C06;&#x4E0D;&#x518D;&#x88AB;&#x4F7F;&#x7528;,&#x6B64;&#x65F6;&#x6587;&#x4EF6;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x5173;&#x95ED;,&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;<code>hClose</code>&#x53BB;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x53E5;&#x67C4;.&#x4F46;&#x662F;&#x4F7F;&#x7528;<code>hClose</code>&#x4ECD;&#x7136;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x4E60;&#x60EF;.</p>
+<p>&#x53E6;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;,&#x7531;&#x4E8E;hGetContents&#x662F;&#x60F0;&#x6027;&#x7684;,&#x5728;&#x4F7F;&#x7528;<code>hGetContents</code>&#x65F6;,&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5173;&#x95ED;&#x53E5;&#x67C4;,&#x76F4;&#x5230;&#x5BF9;&#x5B8C;&#x6210;&#x5BF9;&#x7ED3;&#x679C;&#x7684;&#x4F7F;&#x7528;.&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x53EF;&#x4EE5;&#x6982;&#x62EC;&#x7406;&#x89E3;&#x4E3A;&quot;&#x975E;&#x5FC5;&#x8981;&#x4E0D;&#x8BFB;&#x5165;&quot;,&#x56E0;&#x6B64;&#x5982;&#x679C;&#x5728;&#x5FC5;&#x8981;&#x8BFB;&#x5165;&#x524D;&#x5173;&#x95ED;&#x53E5;&#x67C4;,&#x8FD9;&#x663E;&#x7136;&#x4F1A;&#x9020;&#x6210;&#x9EBB;&#x70E6;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file : toupper-lazy-trouble.hs</span>
+
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> System<span class="token punctuation">.</span>IO</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> Data<span class="token punctuation">.</span>Char</span><span class="token punctuation">(</span><span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+<span class="token hvariable">main</span> <span class="token operator">::</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span> 
+    <span class="token hvariable">inh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;input.txt&quot;</span> <span class="token constant">ReadMode</span>
+    <span class="token hvariable">outh</span> <span class="token operator">&lt;-</span> <span class="token hvariable">openFile</span> <span class="token string">&quot;output.txt&quot;</span> <span class="token constant">WriteMode</span>
+    <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token hvariable">hGetContents</span> <span class="token hvariable">inh</span>
+    <span class="token hvariable">hClose</span> <span class="token hvariable">inh</span>
+    <span class="token keyword keyword-let">let</span> <span class="token hvariable">result</span> <span class="token operator">=</span> <span class="token hvariable">processData</span> <span class="token hvariable">inpStr</span>
+    <span class="token hvariable">hPutStr</span> <span class="token hvariable">outh</span> <span class="token hvariable">result</span>
+    <span class="token hvariable">hClose</span> <span class="token hvariable">outh</span>
+
+<span class="token hvariable">processData</span> <span class="token operator">::</span> <span class="token constant">String</span> <span class="token operator">-&gt;</span> <span class="token constant">String</span>
+<span class="token hvariable">processData</span>  <span class="token operator">=</span> <span class="token builtin">map</span> <span class="token builtin">toUpper</span>
+</pre><p>&#x7A0B;&#x5E8F;&#x5728;&#x663E;&#x5F0F;&#x8C03;&#x7528;&#x53E5;&#x67C4;&#x540E;&#x76F4;&#x63A5;&#x8349;&#x7387;&#x5730;&#x5173;&#x95ED;<code>inh</code>&#x53E5;&#x67C4;,&#x5B9E;&#x9645;&#x4E0A;,&#x5728;&#x540E;&#x7EED;&#x7684;&#x8BED;&#x53E5;&#x4E2D;,&#x7A0B;&#x5E8F;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x4ECE;&#x53E5;&#x67C4;&#x4E2D;&#x8BFB;&#x53D6;&#x5185;&#x5BB9;,&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x95EE;&#x9898;.&#x5982;&#x4E0B;:</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token operator">***</span> <span class="token constant">Exception</span><span class="token operator">:</span> <span class="token hvariable">input</span><span class="token punctuation">.</span><span class="token hvariable">txt</span><span class="token operator">:</span> <span class="token hvariable">hGetContents</span><span class="token operator">:</span> <span class="token hvariable">illegal</span> <span class="token hvariable">operation</span> <span class="token punctuation">(</span><span class="token hvariable">delayed</span> <span class="token builtin">read</span> <span class="token hvariable">on</span> <span class="token hvariable">closed</span> <span class="token hvariable">handle</span><span class="token punctuation">)</span>
+</pre><ul>
+<li><strong>readFile</strong> &#x548C; <strong>writeFile</strong></li>
+</ul>
+<p><code>readFile</code> &#x548C; <code>writeFile</code> &#x96C6;&#x6210;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x6765;&#x5B9E;&#x73B0;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x548C;&#x5199;&#x5165;&#x6587;&#x4EF6;.&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E86;<code>hGetContent</code>.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token builtin">readFile</span>
+<span class="token builtin">readFile</span> <span class="token operator">::</span> <span class="token constant">FilePath</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span> <span class="token constant">String</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token builtin">writeFile</span>
+<span class="token builtin">writeFile</span> <span class="token operator">::</span> <span class="token constant">FilePath</span> <span class="token operator">-&gt;</span> <span class="token constant">String</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><p>&#x518D;&#x6B21;&#x4FEE;&#x6539;toupper-lazy.hs&#x6587;&#x4EF6;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file toupper-lazy-better.hs</span>
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> Data<span class="token punctuation">.</span>Char</span><span class="token punctuation">(</span><span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token keyword keyword-do">do</span>
+    <span class="token hvariable">inpStr</span> <span class="token operator">&lt;-</span> <span class="token builtin">readFile</span> <span class="token string">&quot;input.txt&quot;</span>
+    <span class="token builtin">writeFile</span> <span class="token string">&quot;output.txt&quot;</span> <span class="token punctuation">(</span><span class="token builtin">map</span> <span class="token builtin">toUpper</span> <span class="token hvariable">inpStr</span><span class="token punctuation">)</span>
+</pre><p>&#x4E0D;&#x96BE;&#x53D1;&#x73B0;,&#x5728;&#x4F7F;&#x7528;<code>readFile</code> &#x548C; <code>writeFile</code>&#x65F6;&#x6CA1;&#x6709;&#x66B4;&#x9732;&#x53E5;&#x67C4;,&#x6240;&#x4EE5;&#x5C31;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x53BB;&#x4F7F;&#x7528;<code>hClose</code>&#x8FDB;&#x884C;&#x5173;&#x95ED;&#x64CD;&#x4F5C;,&#x4ECE;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x964D;&#x4F4E;&#x4E86;&#x51FA;&#x9519;&#x7684;&#x673A;&#x7387;.</p>
+<h3 class="mume-header" id="interact" ebook-toc-level-3 heading="&lt;strong&gt;interact&lt;/strong&gt;"><strong>interact</strong></h3>
+
+<p>&#x6070;&#x5982;<code>getLine</code>&#x5BF9;&#x5E94;<code>hgetLine</code>&#x7B49;&#x4E00;&#x7CFB;&#x5217;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x64CD;&#x4F5C;,<code>readFile</code>&#x548C;<code>writeFile</code>&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;<code>interact</code>.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token hvariable">info</span> <span class="token builtin">interact</span>
+<span class="token builtin">interact</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token constant">String</span> <span class="token operator">-&gt;</span> <span class="token constant">String</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token constant">IO</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token comment">-- Defined in &#x2018;System.IO&#x2019;</span>
+</pre><p><code>interact</code>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;<code>String-&gt;String</code>&#x7684;&#x51FD;&#x6570;,&#x5E76;&#x5C06;<code>getContents</code>(&#x5BF9;&#x5E94;<code>hgetContents</code>&#x7684;&#x6807;&#x51C6;&#x8F93;&#x5165;)&#x7684;&#x7ED3;&#x679C;&#x4F20;&#x9012;&#x7ED9;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;,&#x5373;&#x60F0;&#x6027;&#x8BFB;&#x53D6;&#x6807;&#x51C6;&#x8F93;&#x5165;,&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;.</p>
+<p>&#x4F8B;&#x5982;:</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token comment">--file: toupper-lazy-interact.hs</span>
+
+<span class="token import-statement"><span class="token keyword keyword-import">import</span> Data<span class="token punctuation">.</span>Char</span><span class="token punctuation">(</span><span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">main</span> <span class="token operator">=</span> <span class="token builtin">interact</span> <span class="token punctuation">(</span><span class="token builtin">map</span> <span class="token builtin">toUpper</span><span class="token punctuation">)</span>
+</pre><p>&#x6267;&#x884C;&#x540E;,&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5C06;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x529F;&#x80FD;(&#x63D0;&#x793A;:&#x6309;<code>Ctrl-C</code>&#x53EF;&#x4EE5;&#x7ED3;&#x675F;,&#x6216;&#x8005;&#x8F93;&#x5165;<code>Ctrl-Z</code>&#x7ED3;&#x675F;).&#x5F53;&#x7136;,&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;shell&#x7684;&#x7279;&#x884C;,&#x5C06;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;,&#x5B9E;&#x73B0;&#x5C06;<code>input.txt</code>&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x5316;&#x4E3A;&#x5927;&#x5199;&#x540E;&#x5199;&#x5165;&#x5230;<code>output.txt</code>.<br>
+&#x5E76;&#x663E;&#x793A;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token operator">$</span><span class="token hvariable">runghc</span> <span class="token hvariable">toupper</span><span class="token operator">-</span><span class="token hvariable">lazy</span><span class="token operator">-</span><span class="token builtin">interact</span><span class="token punctuation">.</span><span class="token hvariable">hs</span> <span class="token operator">&lt;</span> <span class="token hvariable">input</span><span class="token punctuation">.</span><span class="token hvariable">txt</span> <span class="token operator">&gt;</span> <span class="token hvariable">output</span><span class="token punctuation">.</span><span class="token hvariable">txt</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword keyword-type">type</span> <span class="token hvariable">output</span><span class="token punctuation">.</span><span class="token hvariable">txt</span> 
+</pre><p>&#x6216;&#x8005;&#x60F3;&#x76F4;&#x63A5;&#x663E;&#x793A;&#x8F6C;&#x6362;&#x5185;&#x5BB9;&#x4E5F;&#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token operator">$</span><span class="token hvariable">runghc</span> <span class="token hvariable">toupper</span><span class="token operator">-</span><span class="token hvariable">lazy</span><span class="token operator">-</span><span class="token builtin">interact</span><span class="token punctuation">.</span><span class="token hvariable">hs</span> <span class="token operator">&lt;</span> <span class="token hvariable">input</span><span class="token punctuation">.</span><span class="token hvariable">txt</span>
+</pre><h2 class="mume-header" id="io-monad" ebook-toc-level-2 heading="IO Monad">IO Monad</h2>
+
+<h3 class="mume-header" id="actions" ebook-toc-level-3 heading="Actions">Actions</h3>
+
+<p>&#x5927;&#x591A;&#x6570;&#x8BED;&#x8A00;&#x5728;&#x4EE3;&#x7801;&#x7EAF;&#x5EA6;&#x4E0A;&#x6CA1;&#x6709;&#x660E;&#x663E;&#x7684;&#x9694;&#x79BB;&#x884C;&#x4E3A;,haskell&#x7684;&#x51FD;&#x6570;&#x662F;&#x7C7B;&#x4F3C;&#x6570;&#x5B66;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x51FD;&#x6570;&#x2014;&#x2014;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x7EAF;&#x7CB9;&#x7684;&#x8BA1;&#x7B97;,&#x5E76;&#x4E14;&#x8FD9;&#x4E9B;&#x8BA1;&#x7B97;&#x4E0D;&#x4F1A;&#x88AB;&#x5916;&#x90E8;&#x6240;&#x5F71;&#x54CD;,&#x4E14;&#x4F1A;&#x8FD4;&#x56DE;&#x503C;.</p>
+<p>&#x56E0;&#x6B64;haskell&#x7684;&#x51FD;&#x6570;&#x65F6;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;I/O&#x7684;,haskell&#x4E2D;&#x4F7F;&#x7528;I/O&#x7684;&#x5DE5;&#x5177;&#x79F0;&#x4E3A;Actions,&#x52A8;&#x4F5C;&#x7C7B;&#x4F3C;&#x4E8E;&#x51FD;&#x6570;,&#x5B83;&#x4EEC;&#x5728;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;,&#x4F46;&#x5728;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x6267;&#x884C;&#x4EFB;&#x52A1;.I/O&#x52A8;&#x4F5C;&#x88AB;&#x5B9A;&#x4E49;&#x5728;<code>IO Monad</code></p>
+<h3 class="mume-header" id="%E4%B8%B2%E8%81%94%E5%8C%96" ebook-toc-level-3 heading="&amp;#x4E32;&amp;#x8054;&amp;#x5316;">&#x4E32;&#x8054;&#x5316;</h3>
+
+<p><code>do</code>&#x4EE3;&#x7801;&#x5757;&#x5B9E;&#x9645;&#x4E0A;&#x65F6;&#x628A;&#x64CD;&#x4F5C;&#x94FE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x5FEB;&#x6377;&#x8BB0;&#x53F7;,&#x6709;&#x4E24;&#x4E2A;&#x8FD0;&#x7B97;&#x7B26;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4EE3;&#x66FF;<code>do</code>&#x4EE3;&#x7801;&#x5757;:<code>&gt;&gt;</code>&#x548C;<code>&gt;&gt;=</code>.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token punctuation">(</span><span class="token operator">&gt;&gt;</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token operator">&gt;&gt;</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token constant">Monad</span> <span class="token hvariable">m</span> <span class="token operator">=&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">a</span> <span class="token operator">-&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">b</span> <span class="token operator">-&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">b</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;</span> <span class="token operator">:</span><span class="token keyword keyword-type">type</span> <span class="token punctuation">(</span><span class="token operator">&gt;&gt;=</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token operator">&gt;&gt;=</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token constant">Monad</span> <span class="token hvariable">m</span> <span class="token operator">=&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">a</span> <span class="token operator">-&gt;</span> <span class="token punctuation">(</span><span class="token hvariable">a</span> <span class="token operator">-&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">b</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token hvariable">m</span> <span class="token hvariable">b</span>
+</pre><p><code>&gt;&gt;</code>&#x8FD0;&#x7B97;&#x7B26;&#x5C06;&#x8FDE;&#x4E2A;&#x64CD;&#x4F5C;&#x4E32;&#x8054;&#x8D77;&#x6765;,&#x5148;&#x8FD0;&#x884C;&#x7B2C;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;,&#x518D;&#x8FD0;&#x884C;&#x7B2C;&#x4E8C;&#x4E2A;&#x64CD;&#x4F5C;,&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;,&#x7B2C;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x88AB;&#x4E22;&#x5F03;.</p>
+<p>&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token hvariable">a</span> <span class="token operator">&lt;-</span> <span class="token builtin">getLine</span> <span class="token operator">&gt;&gt;</span> <span class="token builtin">getLine</span>
+<span class="token hvariable">line1</span>
+<span class="token hvariable">line2</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token hvariable">a</span>
+<span class="token string">&quot;line2&quot;</span>
+</pre><p><code>&gt;&gt;=</code>&#x8FD0;&#x7B97;&#x7B26;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;,&#x7136;&#x540E;&#x628A;&#x5B83;&#x7684;&#x7ED3;&#x679C;&#x4F20;&#x9012;&#x7ED9;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x64CD;&#x4F5C;&#x7684;&#x51FD;&#x6570;.&#x8FD9;&#x6837;&#x5730;&#x70ED;&#x4E2A;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x540C;&#x6837;&#x8FD0;&#x884C;,&#x800C;&#x4E14;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token builtin">getLine</span> <span class="token operator">&gt;&gt;=</span> <span class="token builtin">putStrLn</span>
+<span class="token hvariable">line1</span>
+<span class="token hvariable">line1</span>
+</pre><h3 class="mume-header" id="return" ebook-toc-level-3 heading="return">return</h3>
+
+<p>haskell&#x4E2D;&#x7684;<code>return</code>&#x51FD;&#x6570;&#x4E8E;&#x5E38;&#x89C4;&#x8BED;&#x8A00;&#x4E2D;&#x7684;return&#x4E0D;&#x540C;.&#x5728;haskell&#x4E2D;,<code>return</code>&#x7528;&#x6765;&#x5728;Monad&#x91CC;&#x9762;&#x5305;&#x8D5A;&#x6570;&#x636E;,&#x5F53;&#x4F7F;&#x7528;<code>return</code>&#x7684;&#x65F6;&#x5019;,&#x5B83;&#x5C06;&#x4E00;&#x4E2A;&#x7EAF;&#x6570;&#x636E;&#x5E26;&#x5165;IO Monad.</p>
+<pre data-role="codeBlock" data-info="haskell" class="language-haskell"><span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token hvariable">f</span> <span class="token operator">=</span> <span class="token operator">\</span><span class="token hvariable">_</span> <span class="token operator">-&gt;</span> <span class="token builtin">return</span> <span class="token string">&quot;io output&quot;</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token hvariable">f</span>
+<span class="token hvariable">f</span> <span class="token operator">::</span> <span class="token constant">Monad</span> <span class="token hvariable">m</span> <span class="token operator">=&gt;</span> <span class="token hvariable">p</span> <span class="token operator">-&gt;</span> <span class="token hvariable">m</span> <span class="token punctuation">[</span><span class="token constant">Char</span><span class="token punctuation">]</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token hvariable">f</span> <span class="token number">1</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token hvariable">a</span>
+<span class="token hvariable">a</span> <span class="token operator">::</span> <span class="token constant">Monad</span> <span class="token hvariable">m</span> <span class="token operator">=&gt;</span> <span class="token hvariable">m</span> <span class="token punctuation">[</span><span class="token constant">Char</span><span class="token punctuation">]</span>
+<span class="token hvariable">ghci</span><span class="token operator">&gt;</span><span class="token hvariable">b</span> <span class="token operator">&lt;-</span> <span class="token hvariable">a</span> 
+<span class="token hvariable">ghci</span><span class="token operator">&gt;:</span><span class="token keyword keyword-type">type</span> <span class="token hvariable">b</span>
+<span class="token hvariable">b</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Char</span><span class="token punctuation">]</span>
+</pre><h2 class="mume-header" id="%E6%83%B0%E6%80%A7io%E7%9A%84%E5%89%AF%E4%BD%9C%E7%94%A8" ebook-toc-level-2 heading="&amp;#x60F0;&amp;#x6027;I/O&amp;#x7684;&amp;#x526F;&amp;#x4F5C;&amp;#x7528;">&#x60F0;&#x6027;I/O&#x7684;&#x526F;&#x4F5C;&#x7528;</h2>
+
+<p>haskell&#x4E2D;&#x7EAF;&#x4EE3;&#x7801;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x5B8C;&#x5168;&#x662F;&#x65E0;&#x526F;&#x4F5C;&#x7528;&#x7684;,&#x4F46;&#x662F;&#x60F0;&#x6027;I/O&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E9B;&#x660E;&#x663E;&#x89E6;&#x53D1;&#x526F;&#x4F5C;&#x7528;&#x547D;&#x4EE4;&#x7684;&#x8BED;&#x53E5;&#x5206;&#x79BB;&#x5F00;.&#x8FD9;&#x4E9B;&#x660E;&#x663E;&#x89E6;&#x53D1;&#x526F;&#x4F5C;&#x7528;&#x5305;&#x62EC;&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x53D8;&#x91CF;,&#x8BF7;&#x6C42;I/O&#x7B49;.</p>
+<h2 class="mume-header" id="%E7%BC%93%E5%86%B2%E5%8C%BA" ebook-toc-level-2 heading="&amp;#x7F13;&amp;#x51B2;&amp;#x533A;">&#x7F13;&#x51B2;&#x533A;</h2>
+
+<blockquote>
+<p>I/O&#x5B50;&#x7CFB;&#x7EDF;&#x662F;&#x73B0;&#x4EE3;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6700;&#x6162;&#x7684;&#x90E8;&#x5206;&#x4E4B;&#x4E00;&#x3002;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x5199;&#x78C1;&#x76D8;&#x7684;&#x65F6;&#x95F4;&#x662F;&#x4E00;&#x6B21;&#x5199;&#x5185;&#x5B58;&#x7684;&#x51E0;&#x5343;&#x500D;&#x3002;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x7684;&#x5199;&#x5165;&#x8FD8;&#x8981;&#x6162;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x500D;&#x3002;&#x5C31;&#x7B97;&#x4F60;&#x7684;&#x64CD;&#x4F5C;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x548C;&#x78C1;&#x76D8;&#x901A;&#x4FE1;&#xFF0C;&#x53EF;&#x80FD;&#x6570;&#x636E;&#x88AB;&#x7F13;&#x5B58;&#x4E86;&#xFF0C;I/O&#x8FD8;&#x662F;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E5F;&#x4F1A;&#x51CF;&#x6162;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x73B0;&#x4EE3;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x548C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x5DE5;&#x5177;&#x6765;&#x5E2E;&#x52A9;&#x7A0B;&#x5E8F;&#x5F53;&#x6D89;&#x53CA;&#x5230;I/O&#x7684;&#x65F6;&#x5019;&#x66F4;&#x597D;&#x5730;&#x8FD0;&#x884C;&#x3002;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x7F13;&#x5B58;&#xFF08;Cache&#xFF09;&#xFF0C;&#x628A;&#x9891;&#x7E41;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7247;&#x6BB5;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x66F4;&#x5FEB;&#x7684;&#x8BBF;&#x95EE;&#x4E86;&#x3002;</p>
+<p>&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x901A;&#x5E38;&#x91C7;&#x7528;&#x7F13;&#x51B2;&#x533A;&#x3002;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x4ECE;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BF7;&#x6C42;&#x4E00;&#x5927;&#x5757;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x7B97;&#x5E95;&#x5C42;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x6B21;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5730;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x663E;&#x8457;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x5411;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;I/O&#x8BF7;&#x6C42;&#x5E26;&#x6765;&#x4E00;&#x6B21;&#x5904;&#x7406;&#x5F00;&#x9500;&#x3002;&#x7F13;&#x51B2;&#x533A;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x53BB;&#x8BFB;&#x76F8;&#x540C;&#x6570;&#x91CF;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x7528;&#x5C11;&#x5F97;&#x591A;&#x7684;I/O&#x8BF7;&#x6C42;&#x3002;<br>
+&#x2014;&#x2014; &lt;&lt; Real World Haskell &gt;&gt;</p>
+</blockquote>
+<h3 class="mume-header" id="%E7%BC%93%E5%86%B2%E5%8C%BA%E6%A8%A1%E5%BC%8F" ebook-toc-level-3 heading="&amp;#x7F13;&amp;#x51B2;&amp;#x533A;&amp;#x6A21;&amp;#x5F0F;">&#x7F13;&#x51B2;&#x533A;&#x6A21;&#x5F0F;</h3>
+
+<p>haskell&#x4E2D;&#x6709;3&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x6A21;&#x5F0F;&#x2014;&#x2014;<code>NoBuffering</code>,<code>LineBuffering</code>&#x548C;<code>BlockBuffering</code>.</p>
+<ul>
+<li>
+<p><code>NoBuffering</code>&#x6CA1;&#x6709;&#x7F13;&#x51B2;&#x533A;,&#x5982;<code>hGetLine</code>&#x8FD9;&#x6837;&#x7684;&#x51FD;&#x6570;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x662F;&#x4ECE;&#x4ECE;&#x5DE6;&#x7CFB;&#x7EDF;&#x4E00;&#x6B21;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x8BFB;&#x53D6;&#x7684;.&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x7ACB;&#x5373;&#x5199;&#x5165;,&#x540C;&#x6837;&#x4E00;&#x6B21;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;.<code>NoBuffering</code>&#x901A;&#x5E38;&#x6027;&#x80FD;&#x5F88;&#x5DEE;.</p>
+</li>
+<li>
+<p><code>LineBuffering</code>&#x5F53;&#x6362;&#x884C;&#x7B26;&#x8F93;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8BA9;&#x8F93;&#x51FA;&#x7F13;&#x51B2;&#x533A;&#x5199;&#x5165;,&#x6216;&#x8005;&#x5F53;&#x7F13;&#x51B2;&#x533A;&#x592A;&#x5927;&#x7684;&#x65F6;&#x5019;.&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#x7ECF;&#x5E38;&#x662F;&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;.</p>
+</li>
+<li>
+<p><code>BlockBuffering</code>&#x8BA9;Haskell&#x5728;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;,&#x4EE5;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5757;&#x5927;&#x5C0F;&#x8BFB;&#x53D6;&#x6216;&#x8005;&#x5199;&#x5165;&#x6570;&#x636E;.&#x8FD9;&#x5728;&#x6279;&#x5904;&#x7406;&#x5927;&#x91CF;&#x6570;&#x636E;&#x65F6;&#x6027;&#x80FD;&#x5F88;&#x597D;,&#x4F46;&#x5BF9;&#x4E8E;&#x4EA4;&#x4E92;&#x7A0B;&#x5E8F;&#x662F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7684;,&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x963B;&#x585E;&#x8F93;&#x5165;&#x76F4;&#x5230;&#x4E00;&#x6574;&#x5757;&#x6570;&#x636E;&#x88AB;&#x8BFB;&#x53D6;.</p>
+</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x6A21;&#x5F0F;&#x4F9D;&#x8D56;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x548C;haskell&#x7684;&#x5B9E;&#x73B0;.</p>
+<h3 class="mume-header" id="%E5%88%B7%E6%96%B0%E7%BC%93%E5%86%B2%E5%8C%BA" ebook-toc-level-3 heading="&amp;#x5237;&amp;#x65B0;&amp;#x7F13;&amp;#x51B2;&amp;#x533A;">&#x5237;&#x65B0;&#x7F13;&#x51B2;&#x533A;</h3>
+
+<p>&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x51B2;&#x533A;,&#x53EF;&#x80FD;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5F3A;&#x5236;haskell&#x5199;&#x51FA;&#x6240;&#x6709;&#x4FDD;&#x5B58;&#x5728;&#x7F13;&#x51B2;&#x533A;&#x91CC;&#x7684;&#x6570;&#x636E;.&#x6709;&#x65F6;&#x8FD9;&#x4E2A;&#x4F1A;&#x81EA;&#x52A8;&#x53D1;&#x751F;,&#x5982;<code>hClose</code>&#x7684;&#x8C03;&#x7528;.</p>
+<h3 class="mume-header" id="%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0" ebook-toc-level-3 heading="&amp;#x8BFB;&amp;#x53D6;&amp;#x547D;&amp;#x4EE4;&amp;#x884C;&amp;#x53C2;&amp;#x6570;">&#x8BFB;&#x53D6;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</h3>
+
+<h3 class="mume-header" id="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" ebook-toc-level-3 heading="&amp;#x73AF;&amp;#x5883;&amp;#x53D8;&amp;#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+
+</div></body></html>
+    </div>
+  </body>
+</html>
